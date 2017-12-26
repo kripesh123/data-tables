@@ -5,5 +5,13 @@ $(document).ready(function(){
         "info":     true
         //order particular column
         "order":[[0,"asc"]]*/
+        columnDefs: [{
+            "targets": [ 2 ],
+            "visible":false,
+            "searchable":false
+        },{
+            "targets": [ 3 ],
+            "visible": false
+        }]
 	});
 })
