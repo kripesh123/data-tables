@@ -4,7 +4,13 @@ $.extend( true, $.fn.dataTable.defaults, {
 
 $(document).ready(function(){
 	
-	$('#customers').DataTable({});
+	$('#customers').DataTable({
+		"createdRow" : function(row,data,index){
+			if ( data[5].replace(/[\$,]/g, '') * 1 > 150000 ) {
+                $('td', row).eq(5).addClass('highlight');
+            }
+		}
+	});
 
 });
 		
