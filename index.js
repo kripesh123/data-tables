@@ -13,6 +13,10 @@ $(document).ready(function(){
             "targets": [ 3 ],
             "visible": false
         }]*/
-        "dom":'<"top"i>rt<"bottom"flp><"clear">'
+        //"dom":'<"top"i>rt<"bottom"flp><"clear">'
+         //"scrollY":        "300px",
+         "scrollY":        "50vh",
+        "scrollCollapse": true,
+        "paging":         false
 	});
 })
