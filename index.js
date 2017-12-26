@@ -1,18 +1,9 @@
 $(document).ready(function(){
 	
 	$('#customers').DataTable({
-		"columnDefs": [
-            {
-              	"render": function ( data, type, row ) {
-                return data +' ('+ row[3]+')';
-                },
-                "targets": 0
-            },
-            { 	
-            	"visible": false,
-              	"targets": [ 3 ] 
-            }
-        ]
+		"language": {
+            "url": "https://cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/German.json"
+        }
 	});
 
 });
