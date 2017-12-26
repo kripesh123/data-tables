@@ -1,10 +1,20 @@
 $(document).ready(function(){
-	var table = $('#customers').DataTable();
-
-	$('#customers tbody').on('click','tr',function(){
-		var data = table.row(this).data();
-		alert('You clicked on ' +data[1]+'\'s row')
+	
+	$('#customers').DataTable({
+		"columnDefs": [
+            {
+              	"render": function ( data, type, row ) {
+                return data +' ('+ row[3]+')';
+                },
+                "targets": 0
+            },
+            { 	
+            	"visible": false,
+              	"targets": [ 3 ] 
+            }
+        ]
 	});
+
 });
 		
 
